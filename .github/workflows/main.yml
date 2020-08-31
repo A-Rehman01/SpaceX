@@ -25,6 +25,9 @@ jobs:
       with:
         node-version: 12
     
+    - name: Install GraphQL
+      run:  npm install @graphql-codegen/typescript-react-apollo
+    
     - name: Install yarn
       uses: borales/actions-yarn@v2.0.0
       with:
