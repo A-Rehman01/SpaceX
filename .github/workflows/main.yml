@@ -24,12 +24,7 @@ jobs:
       uses: actions/setup-node@v2-beta
       with:
         node-version: 12
-    
-    - name: Install GraphQL
-      uses: -D @graphql-codegen/typescript-react-apollo
-      with:
-        cmd: install
-    
+
     - name: Install yarn
       uses: borales/actions-yarn@v2.0.0
       with:
