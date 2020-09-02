@@ -20,14 +20,9 @@ interface Props {
     data: LaunchesQuery
 }
 
-const useStyles = makeStyles({
-    root: {
-    },
-});
 
 export const Launch: React.FC<Props> = ({ data }) => {
 
-    const classes = useStyles();
     console.log(data)
 
     return (

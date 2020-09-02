@@ -4,7 +4,7 @@ import './App.css';
 //Components
 import { Index } from '../Launch/index'
 import { IndexDetail } from '../LaunchDetail/index'
-import { Launch } from '../Launch/Launch';
+// import { Launch } from '../Launch/Launch';
 function App() {
   return (
     <div className="App">
