@@ -1,5 +1,5 @@
 import React from 'react'
-import {Specific} from './Specific'
+
 //GetType
 import { LaunchesQuery } from '../../generated/graphql'
 
