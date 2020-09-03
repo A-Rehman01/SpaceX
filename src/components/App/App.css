@@ -1,9 +1,44 @@
 .Navbar{
-    height: 60px;
+    /* height: 60px; */
     background-color: black;
     color: white;
     position: sticky;
     top: 0;
     z-index: 1;
     margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
 }
+
+.logodiv{
+    margin-left: 15px;
+    padding: 10px;
+
+}
+.gitdiv{
+    padding: 10px;
+    margin-right: 15px;
+}
+.git{
+    font-size: 50px !important;
+    text-decoration-line: none !important;
+    color:white !important;
+}
+.linkss{
+    text-decoration-line: none;
+}
+@media screen and (max-width: 680px) {
+    .logo{
+        width: 190px  !important;
+    }
+    .logodiv{
+        padding: 4px !important;
+    }
+    .gitdiv{
+        padding: 4px !important;     
+    }
+    .git{
+        font-size: 25px !important;
+    }
+
+  }
