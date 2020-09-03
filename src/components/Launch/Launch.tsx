@@ -24,6 +24,26 @@ export const Launch: React.FC<Props> = ({ data }) => {
 
     console.log(data)
 
+    function DETAIL(detail: any) {
+        var showless = '';
+        if (detail) {
+            for (let index = 0; index < 130; index++) {
+                if(detail.length===index){
+                    showless = showless + ' . . .';
+                    return showless;
+                }
+                else{
+                    showless = showless + detail[index]
+                }
+            }
+            showless = showless + ' . . .';
+            return showless;
+        }
+        else{
+            showless='Not any Detail further click on Learn More . . .'
+            return showless;
+        }
+    }
     return (
 
         <div className='Container'>
@@ -51,9 +71,8 @@ export const Launch: React.FC<Props> = ({ data }) => {
                                             {obj?.launch_success ? "Success" : (obj?.upcoming) ? 'Upcoming' : 'Fail'}
                                         </Typography>
                                     </div>
-                                    <Typography variant="body2" color="textSecondary" component="p">
-                                        Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                                        across all continents except Antarctica
+                                    <Typography className='detail' variant="body2" color="textSecondary" component="p">
+                                        {DETAIL(obj?.details)}
                                     </Typography>
                                 </CardContent>
                             </CardActionArea>

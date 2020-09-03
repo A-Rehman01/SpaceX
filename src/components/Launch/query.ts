@@ -9,6 +9,7 @@ export const QUERY_LAUNCH=gql`
             launch_date_local
             launch_success
             upcoming
+            details
         }
     }
 `;
