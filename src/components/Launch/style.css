@@ -6,44 +6,44 @@
     margin: 0;
 }
 
-.Dates{
+.DatesLaunch{
     display: flex;
     justify-content: space-between;
 }
-.red{
+.redLaunch{
     color: red;
     font-weight: bolder !important;
     font-family: 'Acme', sans-serif !important;
 }
-.green{
+.greenLaunch{
     color: green;
     font-weight: bolder  !important;
     font-family: 'Acme', sans-serif !important;
 }
-.gray{
+.grayLaunch{
     color: #c0c0c0;
     font-weight: bolder;
     font-family: 'Acme', sans-serif !important;
 }
-.title{
+.titleLaunch{
     font-family: 'Vollkorn', serif !important;
     font-weight: bold !important;
 }
-.upcoming{
+.upcomingLaunch{
     display: flex;
     justify-content: space-between;
     margin-bottom: 7px !important;
     margin-top: 7px;
 }
-.Container{
+.ContainerLaunch{
     display: flex !important;
     justify-content: center  !important;
     flex-wrap: wrap !important;
 }
-.detail{
+.detailLaunch{
     height: 70px !important;
 }
-.root{
+.rootLaunch{
         box-shadow: 12px 14px 11px 0px #CCD1D1,
          1px -1px 0px 0px #CCD1D1,
          0px 1px 6px 0px #CCD1D1 !important;
@@ -52,14 +52,14 @@
         border: 1px  solid #85929E
 }
 
-.Button{
+.ButtonLaunch{
     text-decoration-line: none !important;
 }
 
 
 
 @media screen and (max-width: 680px) {
-    .root{
+    .rootLaunch{
         width:  95% !important;
     }
 

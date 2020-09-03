@@ -14,10 +14,10 @@ interface Props {
 }
 
 export const LaunchDetail: React.FC<Props> = ({ data }) => {
-
+    var check=true;
     console.log(data)
     return (
-        <div className='Container'>
+        <div className='ContainerDETAIL'>
             <div className='Title'>
                 LAUNCH: {data.launch?.mission_name}
             </div>
@@ -87,11 +87,22 @@ export const LaunchDetail: React.FC<Props> = ({ data }) => {
                 )}
             </div>
 
-            <hr />
-
 
             <div className='Title'>
-                IMAGE GALLERY
+                {data?.launch?.links?.flickr_images?.map((obj) => {
+                    if (obj?.length !== 0 && check) {
+                        check=false;
+                        return (
+                            'IMAGE GALLERY'
+                        )
+                        
+                    }
+                    else{
+                        return
+                    }
+                })
+
+                }
             </div>
 
             {
@@ -99,7 +110,7 @@ export const LaunchDetail: React.FC<Props> = ({ data }) => {
                     <div className='RocketImagesdiv'>
 
                         {
-                            data.launch.links.flickr_images.map((obj,index) => {
+                            data.launch.links.flickr_images.map((obj, index) => {
                                 return (
                                     obj ? <img src={obj} key={index} alt="Rocket Images" className='Rocket_Images' /> : null
                                 )
@@ -108,8 +119,7 @@ export const LaunchDetail: React.FC<Props> = ({ data }) => {
                     </div>
                 )
             }
-
         </div>
-        
+
     )
 }

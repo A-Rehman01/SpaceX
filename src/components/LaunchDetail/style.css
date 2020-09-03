@@ -7,9 +7,9 @@
     margin: 0;
 }
 
-.Container{
-    /* padding-right: 40px !important;
-    padding-left: 40px !important; */
+.ContainerDETAIL{
+    display: flex !important;
+    flex-direction: column !important;
 }
 .Title{
     font-family: 'Vollkorn', serif !important;

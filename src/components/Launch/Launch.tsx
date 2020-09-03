@@ -47,18 +47,18 @@ export const Launch: React.FC<Props> = ({ data }) => {
     }
     return (
 
-        <div className='Container'>
+        <div className='ContainerLaunch'>
             {
                 !!data.launches && data.launches.map((obj, index) => {
                     return (
-                        <Card key={index} className="root">
+                        <Card key={index} className="rootLaunch">
                             <CardActionArea>
                                 <CardContent>
-                                    <Typography className='title' gutterBottom variant="h6" >
+                                    <Typography className='titleLaunch' gutterBottom variant="h6" >
                                         {obj?.mission_name}
                                     </Typography>
                                     <hr />
-                                    <div className='Dates'>
+                                    <div className='DatesLaunch'>
                                         <Typography variant="subtitle1" component="h2">
                                             {obj?.launch_date_local}
                                         </Typography>
@@ -67,19 +67,19 @@ export const Launch: React.FC<Props> = ({ data }) => {
                                         </Typography>
                                     </div>
                                     <hr />
-                                    <div className='upcoming'>
-                                        <Typography className={obj?.launch_success ? "green" : (obj?.upcoming) ? 'gray' : 'red'} variant="h5" component="h2">
+                                    <div className='upcomingLaunch'>
+                                        <Typography className={obj?.launch_success ? "greenLaunch" : (obj?.upcoming) ? 'grayLaunch' : 'redLaunch'} variant="h5" component="h2">
                                             {obj?.launch_success ? "Success" : (obj?.upcoming) ? 'Upcoming' : 'Fail'}
                                         </Typography>
                                     </div>
-                                    <Typography className='detail' variant="body2" color="textSecondary" component="p">
+                                    <Typography className='detailLaunch' variant="body2" color="textSecondary" component="p">
                                         {DETAIL(obj?.details)}
                                         
                                     </Typography>
                                 </CardContent>
                             </CardActionArea>
                             <CardActions>
-                                <Link className='Button' to={`/${obj?.flight_number}`}>
+                                <Link className='ButtonLaunch' to={`/${obj?.flight_number}`}>
                                 <Button size="small" color="primary">
                                     Learn More
                                 </Button>
