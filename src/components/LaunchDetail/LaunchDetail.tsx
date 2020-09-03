@@ -99,9 +99,9 @@ export const LaunchDetail: React.FC<Props> = ({ data }) => {
                     <div className='RocketImagesdiv'>
 
                         {
-                            data.launch.links.flickr_images.map(obj => {
+                            data.launch.links.flickr_images.map((obj,index) => {
                                 return (
-                                    obj ? <img src={obj} alt="Rocket Images" className='Rocket_Images' /> : null
+                                    obj ? <img src={obj} key={index} alt="Rocket Images" className='Rocket_Images' /> : null
                                 )
                             })
                         }
@@ -110,5 +110,6 @@ export const LaunchDetail: React.FC<Props> = ({ data }) => {
             }
 
         </div>
+        
     )
 }

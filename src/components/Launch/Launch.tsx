@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {Specific} from './Specific'
 //GetType
 import { LaunchesQuery } from '../../generated/graphql'
 
@@ -13,6 +13,7 @@ import Typography from '@material-ui/core/Typography';
 
 //CSS
 import './style.css'
+import { Link } from 'react-router-dom';
 
 //Type
 interface Props {
@@ -73,13 +74,16 @@ export const Launch: React.FC<Props> = ({ data }) => {
                                     </div>
                                     <Typography className='detail' variant="body2" color="textSecondary" component="p">
                                         {DETAIL(obj?.details)}
+                                        
                                     </Typography>
                                 </CardContent>
                             </CardActionArea>
                             <CardActions>
+                                <Link className='Button' to={`/${obj?.flight_number}`}>
                                 <Button size="small" color="primary">
                                     Learn More
                                 </Button>
+                                </Link>
                             </CardActions>
                         </Card>
                     );

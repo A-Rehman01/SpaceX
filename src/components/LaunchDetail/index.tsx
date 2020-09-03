@@ -1,11 +1,14 @@
 import React from 'react';
 import { useLaunchinfoQuery } from '../../generated/graphql';
 import { LaunchDetail } from './LaunchDetail';
+import  {useParams} from 'react-router-dom'
+
 
 export const IndexDetail = () => {
+    const {spaceid} = useParams();
     const { data, loading, error } = useLaunchinfoQuery({
         variables: {
-            id: '22'
+            id: spaceid
         },
     });
 

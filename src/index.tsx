@@ -5,10 +5,13 @@ import App from './components/App/App';
 import * as serviceWorker from './serviceWorker';
 import { ApolloProvider } from '@apollo/client';
 import {client} from './grapghqlClient/Client'
+import {BrowserRouter as Router} from 'react-router-dom';
 
 ReactDOM.render(
   <ApolloProvider client={client}>
+    <Router>
     <App />
+    </Router>
   </ApolloProvider>,
   document.getElementById('root')
 );
