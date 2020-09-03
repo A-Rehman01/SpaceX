@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.Container{
+    /* padding-right: 40px !important;
+    padding-left: 40px !important; */
+}
+.Title{
+    font-family: 'Vollkorn', serif !important;
+    font-weight: bold !important;
+    display: flex !important;
+    justify-content: center !important;
+    font-size: 30px  !important;
+    margin-top: 10px !important;
+    margin-bottom: 30px !important;
+}
+.DetailHeading{
+    font-family: 'Vollkorn', serif !important;
+    font-size: 19px !important;
+    text-transform: uppercase !important;
+    font-weight: 800 !important;
+    color: black !important;
+}
+.smallheding{
+    font-family: 'Vollkorn', serif !important;
+    font-size: 19px !important;    
+    text-transform: capitalize !important;
+    color: black !important;
+}
+.smallheadingdata{
+    color: grey !important;
+}
+.Date,.Rocket{
+    padding: 8px !important;
+}
+.Detail{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 18px !important;
+    color: grey !important;
+}
+.red{
+    color:white !important;
+    font-family: 'Acme', sans-serif !important;
+    font-size: 20px !important;
+}
+.green{
+    color: #229954 !important;
+    font-family: 'Acme', sans-serif !important;
+    font-size: 20px !important;
+}
+.gray{
+    color: #c0c0c0 !important;
+    font-weight: bolder !important;
+    font-size: 20px !important;
+    font-family: 'Acme', sans-serif !important;
+}
+.vedioPlayer{
+    width: 40% !important;
+    height: 300px !important;
+}
+.vediodiv{
+    margin-top: 20px !important;
+    margin-bottom: 30px !important;
+}
+.vedio{
+    display: flex !important;
+    justify-content: center !important;
+}
+.links{
+    text-decoration: none !important;
+    font-size: 19px !important;    
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+}
+.Articals{
+    margin-top: 7px !important;
+    display: flex !important;
+    color: blue !important;
+    word-spacing: 1cm !important;
+}
+.ORSYMBOL{
+    color: black !important;
+    font-size: 19px  !important;
+}
+.RocketImagesdiv{
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+}
+.Rocket_Images{
+    width: 30% !important;
+    height: 310px !important;
+    margin: 15px !important;
+    box-shadow: 12px 14px 11px 0px #CCD1D1,
+    1px -1px 0px 0px #CCD1D1,
+    0px 1px 6px 0px #CCD1D1 !important;
+}
+
+.padding{
+    padding-right: 40px !important;
+    padding-left: 40px !important;
+}
+@media screen and (max-width: 680px) {
+    .vedioPlayer{
+        width:  95% !important;
+    }
+    .Rocket_Images{
+        margin: 0px !important;
+        width: 95% !important;
+        margin-top: 10px !important;
+    }
+    .padding{
+        padding-right: 10px !important;
+        padding-left: 10px !important;
+    }
+  }

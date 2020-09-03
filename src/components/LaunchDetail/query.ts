@@ -6,11 +6,13 @@ export const QUERY_LAUNCHES_DETAIL = gql`
         flight_number
         mission_name
         launch_year
+
         rocket{
             rocket_id
             rocket_name
             rocket_type
             }
+        launch_date_local    
         launch_site{
             site_name
             }
@@ -18,6 +20,8 @@ export const QUERY_LAUNCHES_DETAIL = gql`
         links{
             flickr_images
             video_link
+            article_link
+            wikipedia
             }
         launch_success
         upcoming

@@ -753,7 +753,7 @@ export type LaunchinfoQuery = (
   { __typename?: 'Query' }
   & { launch?: Maybe<(
     { __typename?: 'Launch' }
-    & Pick<Launch, 'flight_number' | 'mission_name' | 'launch_year' | 'details' | 'launch_success' | 'upcoming'>
+    & Pick<Launch, 'flight_number' | 'mission_name' | 'launch_year' | 'launch_date_local' | 'details' | 'launch_success' | 'upcoming'>
     & { rocket?: Maybe<(
       { __typename?: 'LaunchRocket' }
       & Pick<LaunchRocket, 'rocket_id' | 'rocket_name' | 'rocket_type'>
@@ -762,7 +762,7 @@ export type LaunchinfoQuery = (
       & Pick<LaunchSite, 'site_name'>
     )>, links?: Maybe<(
       { __typename?: 'LaunchLinks' }
-      & Pick<LaunchLinks, 'flickr_images' | 'video_link'>
+      & Pick<LaunchLinks, 'flickr_images' | 'video_link' | 'article_link' | 'wikipedia'>
     )> }
   )> }
 );
@@ -817,6 +817,7 @@ export const LaunchinfoDocument = gql`
       rocket_name
       rocket_type
     }
+    launch_date_local
     launch_site {
       site_name
     }
@@ -824,6 +825,8 @@ export const LaunchinfoDocument = gql`
     links {
       flickr_images
       video_link
+      article_link
+      wikipedia
     }
     launch_success
     upcoming
