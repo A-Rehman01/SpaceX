@@ -1,5 +1,7 @@
 import React from 'react'
-
+import ScheduleIcon from '@material-ui/icons/Schedule';
+import ThumbDownIcon from '@material-ui/icons/ThumbDown';
+import ThumbUpIcon from '@material-ui/icons/ThumbUp';
 //GetType
 import { LaunchesQuery } from '../../generated/graphql'
 
@@ -59,17 +61,29 @@ export const Launch: React.FC<Props> = ({ data }) => {
                                     </Typography>
                                     <hr />
                                     <div className='DatesLaunch'>
+                                        <div style={{display:'flex'}}>
+                                       
                                         <Typography variant="subtitle1" component="h2">
-                                            {obj?.launch_date_local}
+                                        <ScheduleIcon style={{marginRight:'5px',fontSize:'18px',marginTop: '4px',marginBottom: '0px'}}/> 
                                         </Typography>
+                                        
+                                        <Typography variant="subtitle1" component="h2">
+                                           {obj?.launch_date_local}
+                                        </Typography>
+                                        </div>
+                                        <div>
                                         <Typography variant="subtitle1" component="h2">
                                             {obj?.launch_year}
                                         </Typography>
+                                        </div>
                                     </div>
                                     <hr />
                                     <div className='upcomingLaunch'>
                                         <Typography className={obj?.launch_success ? "greenLaunch" : (obj?.upcoming) ? 'grayLaunch' : 'redLaunch'} variant="h5" component="h2">
                                             {obj?.launch_success ? "Success" : (obj?.upcoming) ? 'Upcoming' : 'Fail'}
+                                        </Typography>
+                                        <Typography  variant="h5" component="h2">
+                                            {obj?.launch_success ? <ThumbUpIcon style={{marginTop: '7px'}}/> :<ThumbDownIcon style={{marginTop: '7px'}}/> }
                                         </Typography>
                                     </div>
                                     <Typography className='detailLaunch' variant="body2" color="textSecondary" component="p">

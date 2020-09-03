@@ -24,21 +24,21 @@ export const LaunchDetail: React.FC<Props> = ({ data }) => {
             <div className='padding'>
                 <Paper className='Date' elevation={3} >
 
-                    <span className='smallheding'>Date:</span> <span className='smallheadingdata'> {data.launch?.launch_date_local} </span>
+                    <span className='smallheding'>Date : </span> <span className='smallheadingdata'> {data.launch?.launch_date_local} </span>
                     <hr />
-                    <span className='smallheding'>Year:</span>  <span className='smallheadingdata'> {data.launch?.launch_year} </span>
+                    <span className='smallheding'>Year : </span>  <span className='smallheadingdata'> {data.launch?.launch_year} </span>
                     <hr />
-                    <span className='smallheding'>Site Name:</span> <span className='smallheadingdata'> {data.launch?.launch_site?.site_name} </span>
+                    <span className='smallheding'>Site Name : </span> <span className='smallheadingdata'> {data.launch?.launch_site?.site_name} </span>
                 </Paper>
                 <br />
                 <Paper className='Rocket' elevation={3} >
-                    <span className='smallheding'>Rocket_ID: </span>
+                    <span className='smallheding'>Rocket_ID : </span>
                     <span className='smallheadingdata'> {data.launch?.rocket?.rocket_id} </span>
                     <hr />
-                    <span className='smallheding'>Rocket_Name: </span>
+                    <span className='smallheding'>Rocket_Name : </span>
                     <span className='smallheadingdata'> {data.launch?.rocket?.rocket_name} </span>
                     <hr />
-                    <span className='smallheding'>Rocket_Type: </span>
+                    <span className='smallheding'>Rocket_Type : </span>
                     <span className='smallheadingdata'> {data.launch?.rocket?.rocket_type} </span>
                 </Paper>
 
@@ -47,7 +47,8 @@ export const LaunchDetail: React.FC<Props> = ({ data }) => {
                     <div className='Detail'>
                         <div className='DetailHeading'> DETAIL </div>
                         <div className={data.launch?.launch_success ? "green" : (data.launch?.upcoming) ? 'gray' : 'red'}>
-                            <span className='smallheding'>Status</span>    {data.launch?.launch_success ? "Success" : (data.launch?.upcoming) ? 'Upcoming' : 'Fail'}
+                            <span className='smallheding'>Status : </span>
+                       { data.launch?.launch_success ? "Success" : (data.launch?.upcoming) ? 'Upcoming' : 'Fail'}
                         </div>
                         {data.launch?.details}
                     </div>
