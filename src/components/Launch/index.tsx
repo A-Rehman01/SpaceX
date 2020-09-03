@@ -1,12 +1,14 @@
 import React from 'react'
 import { useLaunchesQuery } from '../../generated/graphql'
 import { Launch } from './Launch'
+import {Progress} from '../Loader/Progress'
+
 export const Index = () => {
     const { data, loading, error } = useLaunchesQuery();
 
     if (loading) {
         return (
-            <h2>Loading</h2>
+            <Progress/>
         )
     }
     if (error || !data) {

@@ -19,7 +19,7 @@ export const LaunchDetail: React.FC<Props> = ({ data }) => {
     return (
         <div className='ContainerDETAIL'>
             <div className='Title'>
-                LAUNCH: {data.launch?.mission_name}
+                Mission: {data.launch?.mission_name}
             </div>
             <div className='padding'>
                 <Paper className='Date' elevation={3} >

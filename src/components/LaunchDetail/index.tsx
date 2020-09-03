@@ -1,11 +1,11 @@
 import React from 'react';
 import { useLaunchinfoQuery } from '../../generated/graphql';
 import { LaunchDetail } from './LaunchDetail';
-import  {useParams} from 'react-router-dom'
-
+import { useParams } from 'react-router-dom'
+import { Progress } from '../Loader/Progress'
 
 export const IndexDetail = () => {
-    const {spaceid} = useParams();
+    const { spaceid } = useParams();
     const { data, loading, error } = useLaunchinfoQuery({
         variables: {
             id: spaceid
@@ -14,7 +14,7 @@ export const IndexDetail = () => {
 
     if (loading) {
         return (
-            <h2>Loading</h2>
+            <Progress />
         )
     }
     console.log(error)
